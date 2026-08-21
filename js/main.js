@@ -23,10 +23,15 @@ document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',(
   document.querySelectorAll('.filter').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-selected','false')});
   btn.classList.add('active');btn.setAttribute('aria-selected','true');
   const f=btn.dataset.filter;
-  document.querySelectorAll('.gallery-item').forEach(x=>{
-    const visible=f==='all'||x.dataset.category===f;
-    x.hidden=!visible;
-  });
+  const cards=[...document.querySelectorAll('.gallery-item')];
+  cards.forEach(x=>x.classList.add('is-filtering'));
+  window.setTimeout(()=>{
+    cards.forEach(x=>{
+      const visible=f==='all'||x.dataset.category===f;
+      x.hidden=!visible;
+      if(visible) requestAnimationFrame(()=>x.classList.remove('is-filtering'));
+    });
+  },180);
 }));
 
 function demoForm(id,msg){

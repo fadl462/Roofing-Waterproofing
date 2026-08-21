@@ -15,3 +15,6 @@ Production Master v2 note: critical homepage content is visible even if JavaScri
 
 
 Production Master v4: header presentation refined to remain in normal document flow for reliable full-page rendering and consistent page capture.
+
+
+Production Master v8: added individual project case-study pages, linked project cards, animated project filtering, and project-detail conversion CTAs.
