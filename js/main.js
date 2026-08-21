@@ -1,3 +1,4 @@
+document.documentElement.classList.add('js-ready');
 const navWrap=document.querySelector('.nav-wrap');
 const toggle=document.querySelector('.menu-toggle');
 if(toggle&&navWrap){
