@@ -12,3 +12,6 @@ IMPORTANT BEFORE LAUNCH
 6. Add Google Business Profile link/reviews if desired.
 
 Production Master v2 note: critical homepage content is visible even if JavaScript loads slowly or is unavailable; animations enhance rather than hide content.
+
+
+Production Master v4: header presentation refined to remain in normal document flow for reliable full-page rendering and consistent page capture.
