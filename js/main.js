@@ -38,7 +38,20 @@ function demoForm(id,msg){
   const f=document.getElementById(id),m=document.getElementById(msg);
   if(f)f.addEventListener('submit',e=>{
     e.preventDefault();
-    if(m)m.textContent='Thanks — your submission has been received. Connect this form to your email/CRM before launch.';
+    if(id==='careerForm'){
+      const file=f.querySelector('input[type=\"file\"]')?.files?.[0];
+      if(file && file.size>5*1024*1024){
+        if(m)m.textContent='Please choose a resume smaller than 5 MB.';
+        return;
+      }
+      if(file && !/\.(pdf|docx?)$/i.test(file.name)){
+        if(m)m.textContent='Please upload a PDF, DOC or DOCX resume.';
+        return;
+      }
+      if(m)m.textContent='Application captured in this preview. Connect the form to your hiring inbox or ATS before launch.';
+    } else {
+      if(m)m.textContent='Form captured in this preview. Connect it to your email or CRM before launch.';
+    }
     f.reset();
   });
 }

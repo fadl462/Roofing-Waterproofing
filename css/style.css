@@ -79,3 +79,14 @@ footer{background:#071d27;color:#d5e0e3;padding:68px 0 20px}.footer-grid{display
 @media(prefers-reduced-motion:reduce){
  .gallery-item.is-filtering{transition:none}
 }
+
+/* Careers v10 refinements */
+.career-next{margin-top:2.2rem;padding-top:1.7rem;border-top:1px solid var(--line)}
+.career-next-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:.8rem}
+.career-next-grid>div{display:flex;flex-direction:column;gap:.35rem;padding-right:1rem}
+.career-next-grid>div+div{border-left:1px solid var(--line);padding-left:1rem}
+.career-next-grid strong{font-size:.68rem;letter-spacing:.12em;color:var(--gold)}
+.career-next-grid span{font-size:.82rem;font-weight:700;color:var(--ink)}
+.field-help{display:block;margin-top:.35rem;font-size:.72rem;color:var(--muted)}
+.form-card .form-note{min-height:1.25rem}
+@media(max-width:800px){.career-next-grid{grid-template-columns:1fr;gap:.8rem}.career-next-grid>div+div{border-left:0;border-top:1px solid var(--line);padding-left:0;padding-top:.8rem}}
